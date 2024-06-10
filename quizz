@@ -1,26 +1,26 @@
-class Question:
-    def __init__(self, prompt, answer):
-        self.prompt = prompt
-        self.answer = answer
+class Question: # Crée une classe Question
+    def __init__(self, prompt, answer):# Constructeur de la classe Question
+        self.prompt = prompt # Initialise la question
+        self.answer = answer # Initialise la réponse
 
-question_prompts = [
+question_prompts = [ # Liste des questions
     "Quelle est la couleur du ciel ?\n(a) Bleu\n(b) Rouge\n(c) Vert\n\n",
     "Quelle est la capitale de la France ?\n(a) Paris\n(b) Londres\n(c) Berlin\n\n",
     "Quelle est la racine carrée de 16 ?\n(a) 4\n(b) 8\n(c) 12\n\n"
 ]
 
 questions = [
-    Question(question_prompts[0], "a"),
-    Question(question_prompts[1], "a"),
-    Question(question_prompts[2], "a")
+    Question(question_prompts[0], "a"),  # Crée une instance de Question avec le premier prompt et la réponse "a"
+    Question(question_prompts[1], "a"), 
+    Question(question_prompts[2], "a")  
 ]
 
 def run_quiz(questions):
-    score = 0
-    for question in questions:
+    score = 0  # Initialise le score à 0
+    for question in questions:  
         answer = input(question.prompt)
-        if answer == question.answer:
-            score += 1
-    print("Votre score est de", score, "sur", len(questions))
+        if answer == question.answer:  # Si la réponse de l'utilisateur correspond à la réponse de la question
+            score += 1  # Incrémente le score de 1
+    print("Votre score est de", score, "sur", len(questions))  # Affiche le score final
 
-run_quiz(questions)
+run_quiz(questions)  s
